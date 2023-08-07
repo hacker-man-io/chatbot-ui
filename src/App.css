@@ -1,3 +1,63 @@
+.neon {
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  position: relative;
+  /* color: #fff; */
+  padding: 15px 30px;
+  border: none;
+  /* border-radius: 30px; */
+  /* background: linear-gradient(145deg, #3cb9fc, #b537f2, #8a2be2, #120052); */
+  background-size: 300% 300%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+
+  outline: none;
+  /* transition: all 0.3s ease; */
+}
+
+.chat__icon {
+  background-size: 300% 300%;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.8;
+  /* filter: blur(20px); */
+}
+
+.neon::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(145deg, #3cb9fc, #b537f2, #8a2be2, #120052);
+  background-size: 300% 300%;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.8;
+  /* filter: blur(20px); */
+}
+
+.neon:hover::before {
+  animation: neon-border 1s infinite alternate;
+}
+.chat__icon::before {
+  animation: neon-border 1s infinite alternate;
+}
+
+@keyframes neon-border {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
 .App {
   text-align: center;
 }
